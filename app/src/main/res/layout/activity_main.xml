@@ -1,0 +1,169 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/lblIpAddress"
+        android:id="@+id/lblIpAddress"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtIpAddress"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:minWidth="200dp"
+        android:maxWidth="200dp"
+        android:inputType="text"
+        android:text="192.168.0.102" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/lblSize"
+        android:id="@+id/lblSize"
+        android:layout_below="@+id/txtIpAddress"
+        android:layout_alignParentLeft="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/valSize"
+        android:layout_below="@+id/txtIpAddress"
+        android:layout_alignRight="@+id/txtIpAddress"
+        android:layout_alignLeft="@+id/txtIpAddress"
+        android:text="80" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btnBlack"
+        android:id="@+id/btnBlack"
+        android:layout_below="@+id/valSize"
+        android:layout_alignParentLeft="true"
+        android:onClick="btnBlackClicked" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btnRainbow"
+        android:id="@+id/btnRainbow"
+        android:layout_alignBottom="@+id/btnBlack"
+        android:layout_toRightOf="@+id/btnBlack"
+        android:onClick="btnRainbowClicked" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btnWhite"
+        android:id="@+id/btnWhite"
+        android:layout_alignBottom="@+id/btnRainbow"
+        android:layout_toRightOf="@+id/btnRainbow"
+        android:onClick="btnWhiteClicked" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btnSelectFile"
+        android:id="@+id/btnSelectFile"
+        android:onClick="btnSelectFileClicked"
+        android:layout_below="@+id/valFrames"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/lblFrames"
+        android:id="@+id/lblFrames"
+        android:layout_below="@+id/lblEmpty00"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/valFrames"
+        android:text="20"
+        android:editable="false"
+        android:layout_below="@+id/lblEmpty00"
+        android:layout_alignEnd="@+id/valSize" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtFilename"
+        android:layout_alignBottom="@+id/btnSelectFile"
+        android:layout_alignStart="@+id/valFrames"
+        android:layout_alignEnd="@+id/valFrames"
+        android:enabled="false"
+        android:background="#c8c8c8"
+        android:layout_alignTop="@+id/btnSelectFile" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btnStartFile"
+        android:id="@+id/btnStartFile"
+        android:onClick="btnStartFileClicked"
+        android:layout_below="@+id/btnSelectFile"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btnStart5Sec"
+        android:id="@+id/btnStartFile5Sec"
+        android:onClick="btnStartFile5SecClicked"
+        android:layout_alignTop="@+id/btnStartFile"
+        android:layout_toEndOf="@+id/btnStartFile" />
+
+    <ProgressBar
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/pgrDelay"
+        android:layout_alignBottom="@+id/btnStartFile5Sec"
+        android:layout_alignEnd="@+id/txtFilename"
+        android:layout_alignTop="@+id/btnStartFile5Sec"
+        android:layout_toEndOf="@+id/btnStartFile5Sec"
+        android:max="100" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btnUploadFile"
+        android:id="@+id/btnUploadFile"
+        android:layout_below="@+id/btnStartFile"
+        android:onClick="btnUploadFileClicked" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btnStartUploaded"
+        android:id="@+id/btnStartUploaded"
+        android:onClick="btnStartUploadedClicked"
+        android:layout_below="@+id/btnStartFile5Sec"
+        android:layout_toStartOf="@+id/pgrDelay" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/lblEmpty00"
+        android:layout_below="@+id/btnBlack"
+        android:layout_alignEnd="@+id/btnUploadFile" />
+
+</RelativeLayout>

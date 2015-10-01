@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">LightStickSender</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="lblIpAddress">IP Address</string>
+    <string name="lblSize">size</string>
+    <string name="btnBlack">black</string>
+    <string name="btnRainbow">rainbow</string>
+    <string name="btnWhite">white</string>
+    <string name="btnSelectFile">select file</string>
+    <string name="lblFrames">frames/sec</string>
+    <string name="btnStartFile">start file</string>
+    <string name="btnStart5Sec">start file in 5 sec</string>
+    <string name="btnToUdp">to UDP</string>
+    <string name="btnUploadFile">upload file</string>
+    <string name="btnStartUploaded">start uploaded</string>
+</resources>
